@@ -52,5 +52,14 @@ a{
   border-left: 1px solid #CCCCCC;
 }
 
-
+#download{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #333333;
+  font-family: Roboto;
+}
 
