@@ -27,8 +27,8 @@ class HeartRate {
   async predict(){
   const model = await tf.loadModel('https://shashwatsahay.github.io/moodsensor/model.json');
   if (this.heartRates.length >= 10){
-	this.heartRates=heartRates.slice(-10);
-	tmp=this.heartRates.slice(-10);
+	this.heartRates=this.heartRates.slice(-10);
+	var tmp=this.heartRates.slice(-10);
 	for (var j = 0; j < tmp.length; j++){
 		tmp[j]*=this.scales[j];
 		tmp[j]+=this.min_[j];
