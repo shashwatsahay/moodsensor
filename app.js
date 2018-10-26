@@ -8,7 +8,7 @@ Listener to changes heart rate sensor
 */
 statusText.addEventListener('click', function() {
   statusText.textContent = 'Breathe...';
-  moodText.textContent = 'Relaxed';
+  moodText.textContent = 'Calculating...';
   heartRates =new HeartRate();;
   heartRateSensor.connect()
   .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(handleHeartRateMeasurement))
