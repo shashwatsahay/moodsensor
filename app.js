@@ -24,6 +24,8 @@ function handleHeartRateMeasurement(heartRateMeasurement) {
 function getMeasurments(){
   var x = document.getElementById("container");
   x.style.display = "none";
+  var x = document.getElementById("download");
+  x.style.display = "block";
   var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(heartRates));
   var a = document.createElement('a');
   a.href = 'data:' + data;
