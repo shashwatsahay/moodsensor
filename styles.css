@@ -40,16 +40,18 @@
   -webkit-user-select: none;
 }
 
-a{
-  font: bold 11px Arial;
-  text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
+#downloadlink{
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 38px;
+  width: 128px;
+  overflow-x: visible;
+  cursor: default;
+  padding: 12px 0;
 }
 
 #download{
