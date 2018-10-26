@@ -17,11 +17,11 @@ function handleHeartRateMeasurement(heartRateMeasurement) {
     var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
     statusText.innerHTML = heartRateMeasurement.heartRate + ' &#x2764;';
     heartRates.predicted_value.then(results=> moodText.innerHTML=results);
-    heartRates.addelemet(heartRateMeasurement.heartRate);
+    heartRates.addelememt(heartRateMeasurement.heartRate);
   });
 }
 
 function getMeasurments(){
-	heartates.get();
+	heartRates.get();
 
 }
