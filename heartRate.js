@@ -23,7 +23,7 @@ class HeartRate {
     var container = document.getElementById('download');
     container.appendChild(a);
   }
-async function predict(){
+  async predict(){
   const model = await tf.loadModel('https://zealous-tereshkova-d855b9.netlify.com/model.json');
   if (this.heartRates.length >= 10){
 	this.heartRates=heartRates.slice(-10);
