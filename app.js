@@ -28,6 +28,7 @@ function getMeasurments(){
   x.style.display = "block";
   var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(heartRates));
   var a = document.createElement('a');
+  a.id="downloadlink";
   a.href = 'data:' + data;
   a.download = 'data.json';
   a.innerHTML = 'download JSON';
