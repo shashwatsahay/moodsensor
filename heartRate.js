@@ -41,7 +41,7 @@ class HeartRate {
         this.predicted_value=Promise.resolve("Excited");   
     }
     else{
-	this.predicted_value=Promise.resolve("Relaxed"));  
+	this.predicted_value=Promise.resolve("Relaxed");  
     }
   }
 }
