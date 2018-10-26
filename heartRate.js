@@ -8,6 +8,7 @@ class HeartRate {
   }
   addelement(val){
   this.heartRates.push(val);
+	  this.predict();
   }
   get(){
     var x = document.getElementById("container");
@@ -27,7 +28,7 @@ class HeartRate {
   const model = await tf.loadModel('https://zealous-tereshkova-d855b9.netlify.com/model.json');
   if (this.heartRates.length >= 10){
 	this.heartRates=heartRates.slice(-10);
-	tmp=heartRates.slice(-10);
+	tmp=this.heartRates.slice(-10);
 	for (var j = 0; j < tmp.length; j++){
 		tmp[j]*=this.scales[j];
 		tmp[j]+=this.min_[j];
