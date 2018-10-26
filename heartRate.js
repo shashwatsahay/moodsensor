@@ -37,7 +37,6 @@ class HeartRate {
     const a = tf.tensor(tmp, shape);
     const prediction = model.predict(a);
     var readable_output = prediction.dataSync();
-    console.log(readable_output);
     if (readable_output[0]>0.55){
         this.predicted_value=Promise.resolve("Excited");   
     }
