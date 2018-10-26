@@ -1,4 +1,7 @@
 class HeartRate {
+	/*
+	The constructor loads in the scales and min values for standardising the values
+	*/
     constructor() {
       this.heartRates= new Array();
       this.predicted_value=Promise.resolve("Calculating...");
@@ -6,10 +9,17 @@ class HeartRate {
       this.min_ = [-1.4000000000000001, -1.4285714285714284, -1.4000000000000001, -1.3725490196078431, -1.3461538461538463, -1.320754716981132, -1.320754716981132, -1.2962962962962963, -1.2962962962962963, -1.2727272727272727];
 
   }
+/*
+Adds the next heart rate value to the object and at the same time predicts if there was any change in the mood of the person
+*/
+	
   addelement(val){
   this.heartRates.push(val);
 	  this.predict();
   }
+/*
+This method provides for a way to download the change in heart rate over a the period of experiment in  a JSON format 
+*/
   get(){
     var x = document.getElementById("container");
     x.style.display = "none";
@@ -24,6 +34,10 @@ class HeartRate {
     var container = document.getElementById('download');
     container.appendChild(a);
   }
+/*
+This method provides for the prediction of mood based on the heart rates it updates the value of  predicted_values which 
+can be featched by the main program i.e. apps.js 
+*/
   async predict(){
   const model = await tf.loadModel('https://shashwatsahay.github.io/moodsensor/model.json');
   if (this.heartRates.length >= 10){
