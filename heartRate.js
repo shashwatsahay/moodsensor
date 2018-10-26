@@ -1,6 +1,6 @@
 class HeartRate {
     constructor() {
-      var heartRates= new Array();
+      this.heartRates= new Array();
   }
   addelement(val){
   this.heartRates.push(val);
